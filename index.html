@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Mitansh Patel</title>
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <meta name="title" content="Portfolio | Mitansh Patel" />
+  <meta name="description"
+    content="Welcome to my portfolio site! I am a passionate and skilled frontend developer showcasing my work and projects. Explore my portfolio to see examples of my creative designs and innovative solutions. With expertise in frontend development, I aim to make a positive impact through my work. Feel free to get in touch for potential collaborations or opportunities." />
+
+  
+  <!-- import bootstrap, font awesome & custom style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- import jquery and bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+  <script src="js/portfolios.js"></script>
+</head>
+
+<body>
+  <section class="top-nav-sec">
+    <div class="top-nav-wrapper">
+      <div class="top-nav">
+        <a href="javascript:;">
+          <div class="sticky-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </a>
+        <div class="left-icon-area">
+          <p>Mitansh <span>Patel</span></p>
+        </div>
+        <div class="center-btn-area">
+          <ul>
+            <li data-target="about">
+              <a href="#">About</a>
+            </li>
+            <li data-target="experience">
+              <a href="#">Experience</a>
+            </li>
+            <li data-target="portfolio">
+              <a href="#">Portfolio</a>
+            </li>
+            <li data-target="education">
+              <a href="#">Education</a>
+            </li>
+            <li data-target="contact">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right-btn-area">
+          
+          <div class="side-menu">
+            <div class="side-menu-burger">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-bottom-contact">
+          <div class="nav-phone-number">
+            <p>Contact for more information</p>
+            <a href="tel:+19383108982">+1 9383108982</a>
+          </div>
+          <div class="nav-social-media">
+            <a href="https://github.com/mitansh108" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mitansh-patel-934264168/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="http://wa.me/9383108982" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="landing-section landing-fade-up-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 landing-left-text">
+          <h2>
+            <span class="platinum-color landing-fade-up-item">Mitansh Patel</span> 
+            <br>
+            <span class="landing-fade-up-item typing-job"></span>
+          </h2>
+          
+          <style>
+            .typing-job {
+              font-weight: bold;
+              border-right: 2px solid white; /* Cursor effect */
+              white-space: nowrap;
+              overflow: hidden;
+              display: inline-block;
+            }
+          
+            @keyframes blink-cursor {
+              50% { border-color: transparent; }
+            }
+          </style>
+          
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const jobTitles = ["Full Stack Developer", "Data Scientist", "AI/ML Enthusiast", "Problem Solver"];
+              let jobIndex = 0;
+              let jobElement = document.querySelector(".typing-job");
+          
+              function typeEffect(text, speed, callback) {
+                let i = 0;
+                jobElement.innerHTML = "";
+                function type() {
+                  if (i < text.length) {
+                    jobElement.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                  } else {
+                    setTimeout(callback, 1000); // Wait before clearing
+                  }
+                }
+                type();
+              }
+          
+              function startTyping() {
+                typeEffect(jobTitles[jobIndex], 100, () => {
+                  setTimeout(() => {
+                    jobElement.innerHTML = "";
+                    jobIndex = (jobIndex + 1) % jobTitles.length;
+                    startTyping();
+                  }, 1000);
+                });
+              }
+          
+              startTyping();
+            });
+          </script>
+          
+          
+          
+          <p class="mobile-text-center landing-fade-up-item">Innovating the web with purpose and precision. <br>I create accessible, user-friendly digital experiences that leave a lasting impact.
+          </p>
+          
+        </div>
+      </div>
+
+
+
+
+
+
+
+      
+      <div class="row">
+        <div class="col-md-12 landing-effect-right landing-fade-up-item">
+          <div class="laptop-wrapper">
+            <img src="./images/home-mac.png" alt="" id="move-image">
+
+
+            <div class="screen-wrapper">
+              <div class="laptop-screen">
+                <div class="laptop-cursor">
+                  <svg width="150%" height="100%" viewBox="0 0 332 322" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.5 9L147 310.5L214 199.5M10.5 9L214 199.5M10.5 9L320.5 125L214 199.5" stroke="#000"
+                      stroke-width="10" fill="#000" />
+                  </svg>
+                </div>
+                <div class="container">
+                  <div class="row selections">
+                    <div class="col-md-12 selections-title">
+                      <p>Explore my skills</p>
+                    </div>
+                    
+                    <div class="col-md-6 single-selection">
+                      <div class="select-card" data-selection="1">
+                        <p>Programming Languages</p>
+                        <i class="fas fa-code"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-6 single-selection">
+                      <div class="select-card" data-selection="2">
+                        <p>Development</p>
+                        <i class="fas fa-desktop"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-6 single-selection">
+                      <div class="select-card" data-selection="3">
+                        <p>Data Science & Analytics</p>
+                        <i class="fas fa-database"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-6 single-selection">
+                      <div class="select-card" data-selection="4">
+                        <p>Tools</p>
+                        <i class="fas fa-tools"></i>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="row select-result select-result-a">
+                    <div class="col-md-12 back-button-wrapper">
+                      <div class="back-button">
+                        <i class="fas fa-chevron-left"></i><span>back</span>
+                      </div>
+                    </div>
+                    <div class="col-md-12 result-wrapper">
+                      <div class="container no-gutters">
+                        <div class="row">
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>HTML5</h6>
+                                <p>Proficient in the features of HTML5.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/css3.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>CSS3</h6>
+                                <p>Proficient in the features of CSS3 and CSS preprocessor <b>SASS</b>.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png&color=000000" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Tailwind CSS</h6>
+                                <p>Proficient in using Tailwind CSS for rapidly building custom, responsive web design.</p>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>JavaScript</h6>
+                                <p>Proficient in <b>ES6</b> features of Javascript and <b>TypeScript</b>.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Java</h6>
+                                <p>Proficient in Java syntax and object-oriented programming concepts.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Python</h6>
+                                <p>Proficient in Python, leveraging its versatility to develop efficient and scalable solutions.</p>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row select-result select-result-b">
+                    <div class="col-md-12 back-button-wrapper">
+                      <div class="back-button">
+                        <i class="fas fa-chevron-left"></i><span>back</span>
+                      </div>
+                    </div>
+                    <div class="col-md-12 result-wrapper">
+                      <div class="container no-gutters">
+                        <div class="row">
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/officel/80/react.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>React</h6>
+                                <p>Proficient in developing SPAs using React, Redux, and Ant Design.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/vue-js.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Vue</h6>
+                                <p>Proficient in using Vue 2.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/angularjs.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Angular</h6>
+                                <p>Proficient in developing a reusable component library for internal company use using
+                                  Angular.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/webpack.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Webpack</h6>
+                                <p>Familiar with basic configurations of Webpack.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/officel/80/react.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>React Native</h6>
+                                <p>Proficient in developing mobile applications using React Native.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://nextjs.org/favicon.ico" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Next.js</h6>
+                                <p>Familiar with the Next.js framework for server-side rendering.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/nodejs.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>node.js</h6>
+                                <p>Proficient in developing APIs using node.js and express.js.</p>
+                              </div>
+                            </div>
+                          </div>
+                         
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/mysql-logo.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>MySql</h6>
+                                <p>Proficient in using MySql and knowledgeable about SQL syntax and relational
+                                  databases.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>MongoDB</h6>
+                                <p>Skilled in working with MongoDB, utilizing NoSQL for flexible, scalable data storage.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Docker</h6>
+                                <p>Experienced in using Docker for containerization and ensuring consistent development environments.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/?size=100&id=cvzmaEA4kC0o&format=png&color=000000" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Kubernetes</h6>
+                                <p>Familiar with Kubernetes for container orchestration and scalable application deployments.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/firebase.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Firebase</h6>
+                                <p>Proficient in using Firebase's Firestore and Cloud Messaging functionalities.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row select-result select-result-c">
+                    <div class="col-md-12 back-button-wrapper">
+                      <div class="back-button">
+                        <i class="fas fa-chevron-left"></i><span>back</span>
+                      </div>
+                    </div>
+                    <div class="col-md-12 result-wrapper">
+                      <div class="container no-gutters">
+                        <div class="row">
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/?size=100&id=97624&format=png&color=000000" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Libraries/Frameworks</h6>
+                                <p>Proficient in TensorFlow, PyTorch, Keras, Scikit-learn, Pandas, NumPy</p>
+                              </div>
+                            </div>
+                          </div>
+                         
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/?size=100&id=9Kvi1p1F0tUo&format=png&color=000000" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Data Visualization</h6>
+                                <p>Tableau, Matplotlib, Seaborn, D3.js</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/?size=100&id=0cRqPqlItA0E&format=png&color=000000" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Big Data </h6>
+                                <p>Skilled in working with Apache Spark, Hadoop</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/?size=100&id=33039&format=png&color=000000" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Cloud</h6>
+                                <p>Proficient in using AWS for compute (EC2), storage (S3), and managed databases (RDS).</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                             
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row select-result select-result-d">
+                    <div class="col-md-12 back-button-wrapper">
+                      <div class="back-button">
+                        <i class="fas fa-chevron-left"></i><span>back</span>
+                      </div>
+                    </div>
+                    <div class="col-md-12 result-wrapper">
+                      <div class="container no-gutters">
+                        <div class="row">
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/figma--v1.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Figma</h6>
+                                <p>Proficient in using Figma for UI/UX design and creating prototypes.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/git.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Git</h6>
+                                <p>Proficient in using version control tools like Git.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/fluency/48/docker.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>Docker</h6>
+                                <p>Currently learning Docker and Kubernetes</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 py-3 pr-4 pl-0 single-skill">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/amazon-web-services.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-md-10 pl-4">
+                                <h6>AWS</h6>
+                                <p>Currently learning AWS (Amazon Web Services)</p>
+                              </div>
+                            </div>
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="person-beside">
+              <svg width="100%" height="100%" viewBox="0 0 275 494" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+               
+              </svg>
+            </div>
+          </div>
+          <div class="phone-wrapper">
+            <img src="./images/home-phone.png" alt="">
+            <div class="phone-screen-wrapper">
+              <div class="phone-screen">
+                <div class="container">
+                  <div class="row selections">
+                    <div class="col-md-12 selections-title">
+                      <p>Explore my skills</p>
+                    </div>
+                    <div class="col-md-12 single-selection">
+                      <div class="select-card" data-selection="1">
+                        <p>Programming Languages</p>
+                        <i class="fas fa-code"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-12 single-selection">
+                      <div class="select-card" data-selection="2">
+                        <p>Frontend</p>
+                        <i class="fas fa-desktop"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-12 single-selection">
+                      <div class="select-card" data-selection="3">
+                        <p>Backend</p>
+                        <i class="fas fa-database"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-12 single-selection">
+                      <div class="select-card" data-selection="4">
+                        <p>Tools</p>
+                        <i class="fas fa-tools"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row select-result select-result-a">
+                    <div class="col-md-12 back-button-wrapper">
+                      <div class="back-button">
+                        <i class="fas fa-chevron-left"></i><span>back</span>
+                      </div>
+                    </div>
+                    <div class="col-md-12 result-wrapper">
+                      <div class="container no-gutters">
+                        <div class="row">
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>HTML5</h6>
+                                <p>Proficient in the features of HTML5.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/css3.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>CSS3</h6>
+                                <p>Proficient in the features of CSS3 and CSS preprocessor <b>SASS</b>.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>JavaScript</h6>
+                                <p>Proficient in <b>ES6</b> features of Javascript and <b>TypeScript</b>.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>Java</h6>
+                                <p>Proficient in Java syntax and object-oriented programming concepts.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/ios-filled/50/php-logo.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>PHP</h6>
+                                <p>Knowledgeable about the basic usage of PHP.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row select-result select-result-b">
+                    <div class="col-md-12 back-button-wrapper">
+                      <div class="back-button">
+                        <i class="fas fa-chevron-left"></i><span>back</span>
+                      </div>
+                    </div>
+                    <div class="col-md-12 result-wrapper">
+                      <div class="container no-gutters">
+                        <div class="row">
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/officel/80/react.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>React</h6>
+                                <p>Proficient in developing SPAs using React, Redux, and Ant Design.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/vue-js.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>Vue</h6>
+                                <p>Proficient in using Vue 2 and have project development experience.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/angularjs.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>Angular</h6>
+                                <p>Proficient in developing a reusable component library for internal company use using
+                                  Angular.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/webpack.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>Webpack</h6>
+                                <p>Familiar with basic configurations of Webpack.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/officel/80/react.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>React Native</h6>
+                                <p>Proficient in developing mobile applications using React Native.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://nextjs.org/favicon.ico" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>Next.js</h6>
+                                <p>Familiar with the Next.js framework for server-side rendering.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row select-result select-result-c">
+                    <div class="col-md-12 back-button-wrapper">
+                      <div class="back-button">
+                        <i class="fas fa-chevron-left"></i><span>back</span>
+                      </div>
+                    </div>
+                    <div class="col-md-12 result-wrapper">
+                      <div class="container no-gutters">
+                        <div class="row">
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/nodejs.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>node.js</h6>
+                                <p>Proficient in developing APIs using node.js and express.js.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/fluency/48/laravel.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>Laravel</h6>
+                                <p>Proficient in developing applications and APIs using Laravel.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/mysql-logo.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>MySql</h6>
+                                <p>Proficient in using MySql and knowledgeable about SQL syntax and relational
+                                  databases.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/firebase.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>Firebase</h6>
+                                <p>Proficient in using Firebase's Firestore and Cloud Messaging functionalities.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row select-result select-result-d">
+                    <div class="col-md-12 back-button-wrapper">
+                      <div class="back-button">
+                        <i class="fas fa-chevron-left"></i><span>back</span>
+                      </div>
+                    </div>
+                    <div class="col-md-12 result-wrapper">
+                      <div class="container no-gutters">
+                        <div class="row">
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/figma--v1.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>Figma</h6>
+                                <p>Proficient in using Figma for UI/UX design and creating prototypes.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/git.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>Git</h6>
+                                <p>Proficient in using version control tools like Git.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/fluency/48/docker.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>Docker</h6>
+                                <p>Currently learning Docker and Kubernetes</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 py-3 px-0 single-skill">
+                            <div class="row">
+                              <div class="col-2">
+                                <div class="logo">
+                                  <img src="https://img.icons8.com/color/48/amazon-web-services.png" alt="">
+                                </div>
+                              </div>
+                              <div class="col-10 pl-4">
+                                <h6>AWS</h6>
+                                <p>Currently learning AWS (Amazon Web Services)</p>
+                              </div>
+                            </div>
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="particles-js"></div> -->
+    <div class="bubble-container">
+      <div class="bubble-wrapper">
+      </div>
+    </div>
+  </section>
+  <section class="text-running-way-sec">
+    <div class="text-desc">
+      <p class="mobile-text-center">“Perseverance turns dreams into reality!”</p>
+    </div>
+    <div class="text-running-way-left text-running-way">
+      <div class="text-row">
+        <div class="single-services-list">
+          <div class="service-name">HTML</div>
+          <div class="break"></div>
+          <div class="service-name">CSS</div>
+          <div class="break"></div>
+          <div class="service-name"> Tailwind CSS</div>
+          <div class="break"></div>
+          <div class="service-name">JavaScript</div>
+          <div class="break"></div>
+          <div class="service-name">Vue.js</div>
+          <div class="break"></div>
+          <div class="service-name">React.js</div>
+          <div class="break"></div>
+          <div class="service-name">Python</div>
+          <div class="break"></div>
+          <div class="service-name">Java</div>
+          <div class="break"></div>
+        </div>
+      </div>
+    </div>
+    <div class="text-running-way-right text-running-way">
+      <div class="text-row">
+        <div class="single-services-list">
+          
+          <div class="service-name">Node.js</div>
+          <div class="break"></div>
+          <div class="service-name">SQL</div>
+          <div class="break"></div>
+          <div class="service-name">MongoDB</div>
+          <div class="break"></div>
+          <div class="service-name">Docker</div>
+          <div class="break"></div>
+          <div class="service-name">Kubernetes</div>
+          <div class="break"></div>
+          <div class="service-name">Git</div>
+          <div class="break"></div>
+        
+        </div>
+      </div>
+    </div>
+   
+
+    
+  </section>
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 fade-up-box">
+          <img src="./images/C7F39430-35FB-4ED6-BCC9-437D95EB7DA5.JPG" alt="" class="fade-up-item">
+        </div>
+        <div class="col-md-7 what-is mobile-text-center fade-up-box">
+          <span class="fade-up-item">About Me</span>
+          <h3 class="fade-up-item">Mitansh Patel</h3>
+          <p class="fade-up-item">
+            I am a Computer Science graduate student at Arizona State University and a dedicated Software Developer , specializing in full-stack application development. 
+            I focus on creating scalable and responsive web applications using the MERN stack and modern frontend technologies.
+          </p>
+          <p class="fade-up-item">
+            I am deeply committed to self-improvement and constantly seek opportunities to expand my knowledge and skills,
+             not just within the tech industry but also in areas that enrich my personal and professional growth. Whether it's mastering a new framework, exploring innovative problem-solving approaches, 
+            or developing soft skills, I strive to keep evolving and contributing meaningfully to every project I undertake.
+          </p>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="three-board-section" id="experience">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 three-board-desc fade-up-box">
+          <span class="fade-up-item">Experience</span>
+          <h3 class="mobile-text-center fade-up-item">Experience is a Great Teacher</h3>
+        </div>
+      </div>
+    </div>
+    <div class="sticky-height">
+      <div class="sticky-3-board">
+        <div class="container-fluid sticky-relative">
+          <div class="row single-board">
+            <div class="col-md-12">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8 advantages-detail">
+                    <div class="single-advantage mobile-text-center fade-up-box">
+                      <h4 class="fade-up-item">Software Development Intern</h4>
+                      <h5 class="fade-up-item">Kalp Systems</h5>
+                      <span class="fade-up-item">June 2022 - August 2022</span>
+                      
+                      <p class="fade-up-item">At Kalp Systems, I developed full-stack Educational IT Solutions using React.js, Node.js, and SQL.
+                         I built RESTful APIs, implemented secure authentication, and developed modules for finance, HR, and academic workflows. On the frontend, I created responsive LMS interfaces that increased student engagement.
+                          I also optimized SQL queries and indexing, reducing data fetch time by 40% and enabling real-time cross-campus sync. 
+                        The solution reduced IT overhead by 25%, supporting efficient infrastructure management with a lean technical team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row single-board">
+            <div class="col-md-12">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8 advantages-detail">
+                    <div class="single-advantage mobile-text-center fade-up-box">
+                      <h4 class="fade-up-item">Data Science Intern</h4>
+                      <h5 class="fade-up-item">Quark Systems</h5>
+                      <span class="fade-up-item">June 2023 - August 2023</span>
+                      <p class="fade-up-item">As a Data Science Intern at Quark Systems, I worked with a wide variety of datasets, cleaning and preprocessing data from different sources. 
+                        I performed extensive exploratory data analysis (EDA) on large data to extract meaningful patterns and insights that directly informed business decisions. 
+                        I developed several predictive models using Python and Scikit-learn, including Random Forest and Gradient Boosting, achieving an 90% accuracy in predicting key business outcomes. 
+                        Additionally, I gained hands-on experience deploying these models using Amazon SageMaker and S3, allowing for seamless integration into production environments. 
+                        I participated in weekly meetings with senior data scientists to present my work, receive feedback, and collaborate on refining models. This experience enhanced my skills in machine learning deployment, data cleaning, feature engineering, and improved my ability to communicate technical findings effectively to both technical and non-technical stakeholders.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row single-board">
+            <div class="col-md-12">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8 advantages-detail">
+                    <div class="single-advantage mobile-text-center fade-up-box">
+                      <h4 class="fade-up-item">Graduate Teaching Aide - Grader</h4>
+                      <h5 class="fade-up-item">Learning Enterprise, <br>Arizona State University</h5>
+                      <span class="fade-up-item">December 2024 - Current </span>
+                      </p>
+                      <p class="fade-up-item">As a Graduate Teaching Aide for FSE 110, CSE 110: Principles of Java Programming, and CEE 110, I assist over hundereds students, helping them with fundamental concepts and addressing their doubts. 
+                        I foster a supportive learning environment by building strong relationships with students, offering constructive feedback on their work, and encouraging continuous improvement.
+                         Additionally, I conduct one-on-one doubt-solving sessions via Zoom and respond to student queries through Inscribe, ensuring personalized and effective support throughout their learning journey. 
+                        This experience has strengthened my own programming and problem-solving skills, as explaining complex concepts to others enhances my understanding and mastery of the subject.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="features-section" id="features">
+
+  </section>
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-6 col-md-6 left-portfolio-text mobile-text-center">
+          <span>Portfolio</span>
+          <h3>Practice make<br> prefect.</h3>
+          <p>One good work is better than countless bad ones. Not to be an assembly line employee, only to produce
+            best crafted products.</p>
+        </div>
+        <div class="col-lg-5 col-md-6 circular-text">
+          <div class="circular-wrapper">
+            <div class="rotate-text">
+              <svg viewBox="0 0 220 220">
+                <path id="curve" d="M 110 110, 
+                                m -90, 0
+                                a 90,90 0 1,1 180,0
+                                a 90,90 0 1,1 -180,0" fill="transparent" />
+                <text>
+                  <textPath xlink:href="#curve" style="font-size: 21.5px;">
+                    Portfolio — Portfolio — Portfolio — Portfolio — Portfolio — Portfolio —
+                    Portfolio — Portfolio —
+                  </textPath>
+                </text>
+              </svg>
+            </div>
+            <div class="counter">
+              <span>3+</span>
+              <p>years of <br> programming <br> experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="horizontal-scroll-container">
+      <div class="sticky-wrapper">
+        <div class="relative-use">
+          <div class="all-portfolio">
+            <div class="single-portfolio">
+              <div class="portfolio-img" id="portfolio-smart-energy-monitoring">
+                <img src="./images/Screenshot (241) (1).png" alt="">
+              </div>
+              <div class="portfolio-text">
+                <h6>Interactive Visualizations of <br> Global Energy Trends <a href="https://github.com/mitansh108/Energy_Visualisation/tree/main/Visualisation%20Project/Aryan-T-Japan-Kartik-Mitansh-Shiven" target="_blank">
+                  <button style="background-color: white; color: #333; border: 2px solid #333; padding: 5px 10px; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px; cursor: pointer; transition: background-color 0.3s, border-color 0.3s;">
+                    Visit
+                  </button>
+                </a></h6>
+                <p> D3.js, React.js, Mysql and Spring Boot.</p>
+                <span>IoT</span>
+              </div>
+            </div>
+            <div class="single-portfolio">
+              <div class="portfolio-img" id="portfolio-newpages-merchant">
+                <img src="./images/electricity.jpg" alt="">
+              </div>
+              <div class="portfolio-text">
+                <h6>Multivariate Time Series Forecasting <br> for Energy Demand and Electricity Pricing</h6>
+                <p>Python</p>
+                <span>e-commerce</span>
+              </div>
+            </div>
+            <div class="single-portfolio">
+              <div class="portfolio-img" id="portfolio-newpages-merchant">
+                <img src="./images/Screenshot 2025-04-10 at 10.47.50 AM.png" alt="">
+              </div>
+              <div class="portfolio-text">
+               
+                <h6>The Simon Game  <a href="https://simongame108.netlify.app" target="_blank">
+                  <button style="background-color: white; color: #333; border: 2px solid #333; padding: 5px 10px; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px; cursor: pointer; transition: background-color 0.3s, border-color 0.3s;">
+                    Visit
+                  </button>
+                </a></h6>
+                <p>HTML, CSS, JS</p>
+                <span>Online Game</span>
+              </div>
+            </div>
+
+            <div class="single-portfolio">
+              <div class="portfolio-img" id="portfolio-payroll">
+                <img src="./images/microsegnet.jpeg" alt="">
+              </div>
+              <div class="portfolio-text">
+                
+                <h6>MicroSegnet:<br> Microscopic Serb Steel Segmentation <a href="https://huggingface.co/spaces/Mitansh108/Serb_Steel_Segmentation" target="_blank">
+                  <button style="background-color: white; color: #333; border: 2px solid #333; padding: 5px 10px; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px; cursor: pointer; transition: background-color 0.3s, border-color 0.3s;">
+                    Visit
+                  </button>
+                </a></h6>
+                <p>Python, Streamlit</p>
+               
+              </div>
+            </div>
+
+            <div class="single-portfolio">
+              <div class="portfolio-img" id="portfolio-groceries">
+                <img src="./images/Screenshot 2025-04-10 at 10.48.21 AM.png" alt="">
+              </div>
+              <div class="portfolio-text">
+                
+                <h6>Simple Weather App <a href="https://webapp108.netlify.app" target="_blank">
+                  <button style="background-color: white; color: #333; border: 2px solid #333; padding: 5px 10px; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px; cursor: pointer; transition: background-color 0.3s, border-color 0.3s;">
+                    Visit
+                  </button>
+                </a></h6>
+                <p>HTML, CSS, JavaScript</p>
+                <span>Displays Realtime Weather</span>
+                
+                
+              </div>
+            </div>
+            <div class="single-portfolio">
+              <div class="portfolio-img" id="portfolio-payroll">
+                <img src="./images/Screenshot 2025-04-10 at 10.46.33 AM.png" alt="">
+              </div>
+              <div class="portfolio-text">
+                
+                <h6>Washington DC <br>Unique Weather Visualization <a href="https://dcweatherdata.netlify.app" target="_blank">
+                  <button style="background-color: white; color: #333; border: 2px solid #333; padding: 5px 10px; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px; cursor: pointer; transition: background-color 0.3s, border-color 0.3s;">
+                    Visit
+                  </button>
+                </a></h6>
+                <p>HTML, CSS, JS</p>
+    
+              </div>
+            </div>
+            
+            <div class="single-portfolio">
+              <div class="portfolio-img" id="portfolio-groceries">
+                <img src="./images/diabetes.jpg" alt="">
+              </div>
+              <div class="portfolio-text">
+                <h6>Enhanced Diabetes Classification Using  <br> Machine Learning and PCA</h6>
+                <p>Python</p>
+                <span>e-commerce</span>
+              </div>
+            </div>
+            <div class="show-all-portfolio">
+              <div class="card-area">
+                <i class="fas fa-swatchbook"></i>
+                <p>Expanding Horizons! <br> New projects coming soon...</p>
+                <!-- <div>
+                                    <a href="#" class="button-look">show all</a>
+                                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="process-section" id="education">
+    <div class="section-text-start">
+      <span>Education Journey </span>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="process-scroll-area">
+            <div class="process-sticky">
+              <div class="process-moving-relative">
+                <div class="circle">
+                  <div class="circle-content">
+                    <p class="text"></p>
+                    <p class="number"></p>
+                    <a href="javascript:;">
+                      <div class="step-by-step-button">
+                        <i class="fas fa-chevron-down"></i>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="process-moving-path">
+              <div class="process-path-svg-relative">
+                <div class="mobile-step-start">
+                  <div class="mobile-circle">
+                    <p>Explore my<br>education<br>journey now</p>
+                  </div>
+                </div>
+                <div class="single-process process-1">
+                  <div class="process-text-wrapper">
+                    <img src="./images/Statue_outside,St._Xavier's_High_School_Loyola_Hall.jpg" style="width: 130%; height: auto;">
+                    <span>2007 - 2020</span>
+                    <h2>St Xavier's Loyola Hall <br> Ahmedabad</h2>
+                    
+                    <div class="next-step" data-target="1"><i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="single-process process-2">
+                  <div class="process-text-wrapper">
+                    <img src="./images/1586166306phpSrJaHw.jpeg" style="width: 150%; height: auto;">
+                    <span>2020 - 2024</span>
+                    <h1 style="font-size: 30px;">Bachelor's Of Technology <br> Computer Engineering</h1>
+                    <h3 style="font-size: 24px;">Pandit Deendayal Energy University <br> Gandhinagar</h3>
+
+                    
+                    <div class="next-step" data-target="2"><i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                
+                <div class="single-process process-3">
+                  <div class="process-text-wrapper">
+                    <img src="./images/IMG_0345-1-scaled-2.jpg" style="width: 150%; height: auto;">
+                    <span>2024 - Current</span>
+                    <h1 style="font-size: 30px;">Master's Of Science <br> Computer Science</h1>
+                    <h2 style="font-size: 24px;">Arizona State University <br> Tempe</h2>
+                  
+                    <div class="next-step" data-target="3"><i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="mobile-step-end">
+                  <div class="mobile-circle">
+                    <p>The journey of learning<br>is a lifelong pursuit,<br>ending only when we do.</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pricing-section" id="pricing">
+
+  </section>
+  <section class="contact-section" id="contact">
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="mobile-text-center">Want to Connect? <br>
+            <a href="mailto:mitanshpatel10@gmail.com" target="_blank"><mark class="email-change"> mitanshpatel10@gmail.com</mark></a>
+            <br>
+            <a href="http://wa.me/9383108982" target="_blank" class="contact-w-arrow"><mark> +1 9383108982
+              </mark>
+              <i class="fas fa-arrow-right"></i></a>
+              
+          </h2>
+          
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer-section">
+    <div class="footer-col">
+      <div class="copyright-area mobile-text-center">
+        <p>© 2025 Mitansh Patel</p>
+      </div>
+    </div>
+  </section>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

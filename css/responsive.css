@@ -20,7 +20,7 @@
         transition: 0s;
     }
     .three-board-section .single-board:nth-child(2) {
-        background-color: #F9F0FE;
+        background-color:  #8db4f9;
     }
     .three-board-section .single-board:nth-child(4) {
         background-color: #F9F0FE;
@@ -257,20 +257,20 @@
         padding-right: 7.5px;
     }
     .landing-section .landing-effect-right .phone-screen .selections .single-selection:nth-child(2) .select-card {
-        background-color: #efe6f4;
-        color: #a177b4;
+        background-color: #b5d0fe;
+        color: #08020b;
     }
     .landing-section .landing-effect-right .phone-screen .selections .single-selection:nth-child(3) .select-card {
         background-color: #f5f5f5;
-        color: #898989;
+    color: #898989;
     }
     .landing-section .landing-effect-right .phone-screen .selections .single-selection:nth-child(4) .select-card {
-        background-color: #efe6f4;
-        color: #a177b4;
+        background-color: #b5d0fe;
+         color: #898989;
     }
     .landing-section .landing-effect-right .phone-screen .selections .single-selection:nth-child(5) .select-card {
         background-color: #f5f5f5;
-        color: #898989;
+        color: #08020b;
     }
     .landing-section .landing-effect-right .phone-screen .selections .single-selection .select-card:hover {
         outline: 5px solid;
@@ -390,7 +390,7 @@
         padding-left: 0px;
         padding-right: 0px;
     }
-    /* .landing-section .landing-effect-right .phone-screen .select-result .result-wrapper .phone-result-form input, .landing-section .landing-effect-right .phone-screen .select-result .result-wrapper .phone-result-form textarea {
+     .landing-section .landing-effect-right .phone-screen .select-result .result-wrapper .phone-result-form input, .landing-section .landing-effect-right .phone-screen .select-result .result-wrapper .phone-result-form textarea {
         border-radius: 22px;
         border: 0;
         outline: none;
@@ -447,7 +447,7 @@
     }
     .landing-section .landing-effect-right .phone-screen .select-result .result-wrapper .phone-result-form select {
         display: none;
-    } */
+    } 
     .landing-section .landing-effect-right .phone-screen .select-result .result-wrapper .phone-result-form .phone-contact-btn {
         display: flex;
         width: 100%;

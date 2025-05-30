@@ -253,6 +253,7 @@ body.black .top-nav-sec.fixed-nav .top-nav {
     opacity: 1;
     visibility: visible;
     transition: .2s ease-in-out .3s;
+    
 }
 
 .top-nav-sec.fixed-nav .top-nav-wrapper.clicked .top-nav .right-btn-area .nav-get-started a {

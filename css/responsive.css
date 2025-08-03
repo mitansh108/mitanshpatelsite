@@ -230,10 +230,14 @@
     }
 }
 
-/* Ensure laptop is visible on larger screens */
+/* Show laptop on desktop, phone on mobile */
 @media screen and (min-width: 768px) {
     .landing-section .landing-effect-right .laptop-wrapper {
         display: block !important;
+    }
+
+    .landing-section .landing-effect-right .phone-wrapper {
+        display: none !important;
     }
 }
 
@@ -266,104 +270,282 @@
 
     /**/
     .landing-section .landing-effect-right .laptop-wrapper {
-        display: block !important;
-        width: 95% !important;
-        margin: 0 auto;
-        max-width: 500px;
-    }
-
-    .landing-section .landing-effect-right .phone-wrapper {
         display: none !important;
     }
 
-    /* Scale down chat UI elements for mobile while keeping laptop size */
-    .landing-section .landing-effect-right .laptop-screen .chat-interface {
-        border-radius: 4px !important;
+    .landing-section .landing-effect-right .phone-wrapper {
+        display: block !important;
+        width: 90% !important;
+        margin: 0 auto;
+        max-width: 350px;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .chat-header {
+    .landing-section .landing-effect-right .phone-wrapper img {
+        width: 100% !important;
+        height: auto !important;
+        filter: drop-shadow(5px 5px 20px #a5a5a5);
+    }
+
+    .landing-section .landing-effect-right .phone-screen-wrapper {
+        width: 75% !important;
+        top: 3% !important;
+        left: 13% !important;
+        right: 10% !important;
+        height: 94% !important;
+        position: absolute !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        overflow: hidden !important;
+        border-radius: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .landing-section .landing-effect-right .phone-screen {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .landing-section .landing-effect-right .phone-screen .container {
+        height: 100% !important;
+        position: relative !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    /* Phone-specific chat interface styles */
+    .landing-section .landing-effect-right .phone-screen .chat-interface {
+        height: 100% !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        background: #ffffff !important;
+        border-radius: 0 !important;
+        overflow: hidden !important;
+        font-size: 10px !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+    }
+
+    .landing-section .landing-effect-right .phone-screen .chat-header {
         padding: 8px 10px !important;
+        flex-shrink: 0 !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .chat-avatar .avatar-circle {
-        width: 28px !important;
-        height: 28px !important;
+    .landing-section .landing-effect-right .phone-screen .chat-avatar .avatar-circle {
+        width: 25px !important;
+        height: 25px !important;
         border-width: 1px !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .chat-info h4 {
-        font-size: 12px !important;
+    .landing-section .landing-effect-right .phone-screen .chat-info h4 {
+        font-size: 11px !important;
         margin: 0 !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .chat-info .status {
-        font-size: 9px !important;
+    .landing-section .landing-effect-right .phone-screen .chat-info .status {
+        font-size: 8px !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .chat-messages {
+    .landing-section .landing-effect-right .phone-screen .chat-messages {
+        flex: 1 !important;
         padding: 8px !important;
+        overflow-y: auto !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .message {
+    .landing-section .landing-effect-right .phone-screen .message {
         margin-bottom: 8px !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .message-content {
-        padding: 8px 10px !important;
+    .landing-section .landing-effect-right .phone-screen .message-content {
+        padding: 6px 8px !important;
         border-radius: 12px !important;
-        font-size: 11px !important;
+        font-size: 20px !important;
         line-height: 1.3 !important;
+        max-width: 85% !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .message-content p {
-        font-size: 11px !important;
+    .landing-section .landing-effect-right .phone-screen .message-content p {
+        font-size: 15px !important;
         margin: 0 !important;
         line-height: 1.3 !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .message-time {
-        font-size: 8px !important;
-        margin-top: 3px !important;
+    .landing-section .landing-effect-right .phone-screen .message-time {
+        font-size: 7px !important;
+        font-size: 15px !important;
+        margin-top: 2px !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .chat-suggestions {
+    .landing-section .landing-effect-right .phone-screen .chat-suggestions {
         padding: 6px 8px !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 4px !important;
+        align-items: flex-end !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .suggestion-btn {
-        font-size: 9px !important;
-        padding: 4px 8px !important;
-        margin: 3px !important;
-        border-radius: 10px !important;
+    .landing-section .landing-effect-right .phone-screen .suggestion-btn,
+    .landing-section .landing-effect-right .phone-screen #chatSuggestionsPhone .suggestion-btn,
+    .landing-section .landing-effect-right .phone-screen button.suggestion-btn {
+        font-size: 10px !important;
+        padding: 8px 12px !important;
+        margin: 0 !important;
+        border-radius: 8px !important;
+        line-height: 1.1 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px !important;
+        flex: none !important;
+        width: auto !important;
+        max-width: 70% !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        font-weight: 500 !important;
+        background: rgba(141, 180, 249, 0.1) !important;
+        border: 1px solid rgba(141, 180, 249, 0.3) !important;
+        color: #8db4f9 !important;
+        cursor: pointer !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .chat-input-area {
+    .landing-section .landing-effect-right .phone-screen .chat-input-area {
         padding: 6px 8px !important;
+        flex-shrink: 0 !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .input-wrapper {
+    .landing-section .landing-effect-right .phone-screen .input-wrapper {
         padding: 4px 8px !important;
         border-radius: 15px !important;
     }
 
-    .landing-section .landing-effect-right .laptop-screen .input-wrapper input {
+    .landing-section .landing-effect-right .phone-screen .input-wrapper input {
+        font-size: 15px !important;
+        padding: 6px 8px !important;
+    }
+
+    .landing-section .landing-effect-right .phone-screen .input-wrapper input::placeholder {
+        font-size: 10px !important;
+    }
+
+    .landing-section .landing-effect-right .phone-screen .send-btn {
+        width: 20px !important;
+        height: 20px !important;
+        border-radius: 50% !important;
+    }
+
+    .landing-section .landing-effect-right .phone-screen .send-btn svg {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    /* Larger chat UI elements for better mobile visibility */
+    .landing-section .landing-effect-right .laptop-screen .chat-interface {
+        border-radius: 6px !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .chat-header {
+        padding: 12px 14px !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .chat-avatar .avatar-circle {
+        width: 35px !important;
+        height: 35px !important;
+        border-width: 2px !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .chat-info h4 {
+        font-size: 16px !important;
+        margin: 0 !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .chat-info .status {
+        font-size: 12px !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .chat-messages {
+        padding: 12px !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .message {
+        margin-bottom: 12px !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .message-content {
+        padding: 12px 14px !important;
+        border-radius: 16px !important;
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .message-content p {
+        font-size: 14px !important;
+        margin: 0 !important;
+        line-height: 1.4 !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .message-time {
+        font-size: 10px !important;
+        margin-top: 4px !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .chat-suggestions {
+        padding: 8px 12px !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .suggestion-btn,
+    .landing-section .landing-effect-right .laptop-screen #chatSuggestions .suggestion-btn,
+    .landing-section .landing-effect-right .laptop-screen button.suggestion-btn {
         font-size: 10px !important;
         padding: 4px 8px !important;
+        margin: 2px !important;
+        border-radius: 10px !important;
+        line-height: 1.2 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px !important;
+        flex: 1 !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        font-weight: 500 !important;
+        background: rgba(141, 180, 249, 0.1) !important;
+        border: 1px solid rgba(141, 180, 249, 0.3) !important;
+        color: #8db4f9 !important;
+        cursor: pointer !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .chat-input-area {
+        padding: 8px 12px !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .input-wrapper {
+        padding: 6px 12px !important;
+        border-radius: 20px !important;
+    }
+
+    .landing-section .landing-effect-right .laptop-screen .input-wrapper input {
+        font-size: 13px !important;
+        padding: 6px 12px !important;
     }
 
     .landing-section .landing-effect-right .laptop-screen .input-wrapper input::placeholder {
-        font-size: 10px !important;
+        font-size: 13px !important;
     }
 
     .landing-section .landing-effect-right .laptop-screen .send-btn {
-        width: 24px !important;
-        height: 24px !important;
+        width: 32px !important;
+        height: 32px !important;
         border-radius: 50% !important;
     }
 
     .landing-section .landing-effect-right .laptop-screen .send-btn svg {
-        width: 12px !important;
-        height: 12px !important;
+        width: 16px !important;
+        height: 16px !important;
     }
 
     /* Properly sized laptop cursor for mobile */

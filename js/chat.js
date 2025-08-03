@@ -5,7 +5,7 @@
 
 class ChatInterface {
   constructor() {
-    this.typingSpeed = 3; // milliseconds between characters
+    this.typingSpeed = 25; // milliseconds between characters (slower for mobile)
     this.initialDelay = 1000; // delay before starting typing
     this.init();
   }
@@ -27,7 +27,7 @@ class ChatInterface {
   typeMessage(element, message, speed = this.typingSpeed) {
     let i = 0;
     element.innerHTML = '';
-    
+
     const typeChar = () => {
       if (i < message.length) {
         element.innerHTML += message.charAt(i);
@@ -35,7 +35,7 @@ class ChatInterface {
         setTimeout(typeChar, speed);
       }
     };
-    
+
     typeChar();
   }
 
@@ -45,9 +45,9 @@ class ChatInterface {
   startInitialMessage() {
     const typingElement = document.getElementById('typingMessage');
     const typingElementPhone = document.getElementById('typingMessagePhone');
-    
+
     const welcomeMessage = "Hi there! 👋 I'm Mitansh's AI assistant. Ask me anything about his experience, projects, or skills!";
-    
+
     // Handle laptop version
     if (typingElement) {
       setTimeout(() => {
@@ -57,7 +57,7 @@ class ChatInterface {
         }, 2000);
       }, this.initialDelay);
     }
-    
+
     // Handle phone version
     if (typingElementPhone) {
       setTimeout(() => {
@@ -89,29 +89,45 @@ class ChatInterface {
    */
   setupSuggestionButtons() {
     const suggestionButtons = document.querySelectorAll('.suggestion-btn');
-    
+
     suggestionButtons.forEach(button => {
       button.addEventListener('click', () => {
         const message = button.getAttribute('data-message');
-        
+
         // Determine if this is laptop or phone based on parent container
         const isPhone = button.closest('#chatSuggestionsPhone');
-        const chatInput = isPhone ? 
-          document.getElementById('chatInputPhone') : 
+        const chatInput = isPhone ?
+          document.getElementById('chatInputPhone') :
           document.getElementById('chatInput');
-        const suggestions = isPhone ? 
-          document.getElementById('chatSuggestionsPhone') : 
+        const suggestions = isPhone ?
+          document.getElementById('chatSuggestionsPhone') :
           document.getElementById('chatSuggestions');
-        
+
         // Fill the input with the suggestion
         if (chatInput) {
           chatInput.value = message;
           chatInput.focus();
         }
-        
-        // Hide suggestions after first use
+
+        // Hide suggestions after first use - try multiple methods
+        const allSuggestions = document.querySelectorAll('.chat-suggestions');
+        allSuggestions.forEach(suggestionContainer => {
+          console.log('Hiding suggestion container:', suggestionContainer.id || 'no-id');
+          suggestionContainer.style.setProperty('display', 'none', 'important');
+          suggestionContainer.style.setProperty('visibility', 'hidden', 'important');
+          suggestionContainer.style.setProperty('opacity', '0', 'important');
+          suggestionContainer.style.setProperty('height', '0', 'important');
+          suggestionContainer.style.setProperty('overflow', 'hidden', 'important');
+        });
+
+        // Also try the specific one
         if (suggestions) {
-          suggestions.classList.add('hidden');
+          console.log('Also hiding specific suggestions:', suggestions.id);
+          suggestions.style.setProperty('display', 'none', 'important');
+          suggestions.style.setProperty('visibility', 'hidden', 'important');
+          suggestions.style.setProperty('opacity', '0', 'important');
+          suggestions.style.setProperty('height', '0', 'important');
+          suggestions.style.setProperty('overflow', 'hidden', 'important');
         }
       });
     });
@@ -124,7 +140,7 @@ class ChatInterface {
     // Laptop version
     const sendButton = document.getElementById('sendButton');
     const chatInput = document.getElementById('chatInput');
-    
+
     // Phone version
     const sendButtonPhone = document.getElementById('sendButtonPhone');
     const chatInputPhone = document.getElementById('chatInputPhone');
@@ -151,7 +167,7 @@ class ChatInterface {
         }
       });
     }
-    
+
     // Phone enter key press handler
     if (chatInputPhone) {
       chatInputPhone.addEventListener('keypress', (e) => {
@@ -167,32 +183,48 @@ class ChatInterface {
    * @param {string} device - 'laptop' or 'phone'
    */
   handleSendMessage(device = 'laptop') {
-    const chatInput = device === 'phone' ? 
-      document.getElementById('chatInputPhone') : 
+    const chatInput = device === 'phone' ?
+      document.getElementById('chatInputPhone') :
       document.getElementById('chatInput');
-    const suggestions = device === 'phone' ? 
-      document.getElementById('chatSuggestionsPhone') : 
+    const suggestions = device === 'phone' ?
+      document.getElementById('chatSuggestionsPhone') :
       document.getElementById('chatSuggestions');
-    
+
     if (!chatInput) return;
-    
+
     const message = chatInput.value.trim();
     if (!message) return; // Don't send empty messages
-    
+
     // Add user message to chat
     this.addMessage(message, 'user', false, device);
-    
+
     // Clear input
     chatInput.value = '';
-    
-    // Hide suggestions after first message
+
+    // Hide suggestions after first message - try multiple methods
+    const allSuggestions = document.querySelectorAll('.chat-suggestions');
+    allSuggestions.forEach(suggestionContainer => {
+      console.log('Hiding suggestion container after message:', suggestionContainer.id || 'no-id');
+      suggestionContainer.style.setProperty('display', 'none', 'important');
+      suggestionContainer.style.setProperty('visibility', 'hidden', 'important');
+      suggestionContainer.style.setProperty('opacity', '0', 'important');
+      suggestionContainer.style.setProperty('height', '0', 'important');
+      suggestionContainer.style.setProperty('overflow', 'hidden', 'important');
+    });
+
+    // Also try the specific one
     if (suggestions) {
-      suggestions.classList.add('hidden');
+      console.log('Also hiding specific suggestions after message:', suggestions.id);
+      suggestions.style.setProperty('display', 'none', 'important');
+      suggestions.style.setProperty('visibility', 'hidden', 'important');
+      suggestions.style.setProperty('opacity', '0', 'important');
+      suggestions.style.setProperty('height', '0', 'important');
+      suggestions.style.setProperty('overflow', 'hidden', 'important');
     }
-    
+
     // Show typing indicator
     this.showTypingIndicator(device);
-    
+
     // Call AWS Bedrock API
     this.callBedrockAPI(message, device);
   }
@@ -205,7 +237,7 @@ class ChatInterface {
   async callBedrockAPI(message, device = 'laptop') {
     // Using CORS proxy for reliable cross-origin requests
     const apiEndpoint = 'https://corsproxy.io/?https://l74l39ru2b.execute-api.us-east-2.amazonaws.com/chat';
-    
+
     try {
       const response = await fetch(apiEndpoint, {
         method: 'POST',
@@ -217,29 +249,29 @@ class ChatInterface {
           message: message
         })
       });
-      
+
       if (!response.ok) {
         throw new Error(`API request failed with status ${response.status}`);
       }
-      
+
       const data = await response.json();
-      
+
       if (data.error) {
         throw new Error(data.error);
       }
-      
+
       // Hide typing indicator
       this.hideTypingIndicator(device);
-      
+
       // Add AI response with typing animation
       this.addMessage(data.response || 'Sorry, I didn\'t receive a proper response.', 'bot', true, device);
-      
+
     } catch (error) {
       console.error('Error calling Bedrock API:', error);
-      
+
       // Hide typing indicator
       this.hideTypingIndicator(device);
-      
+
       // Show error message
       this.addMessage("Sorry, I'm having trouble connecting right now. Please try again in a moment.", 'bot', false, device);
     }
@@ -250,15 +282,15 @@ class ChatInterface {
    * @param {string} device - 'laptop' or 'phone'
    */
   showTypingIndicator(device = 'laptop') {
-    const chatMessages = device === 'phone' ? 
-      document.getElementById('chatMessagesPhone') : 
+    const chatMessages = device === 'phone' ?
+      document.getElementById('chatMessagesPhone') :
       document.getElementById('chatMessages');
     if (!chatMessages) return;
 
     const typingDiv = document.createElement('div');
     typingDiv.className = 'message bot-message';
     typingDiv.id = device === 'phone' ? 'typingIndicatorPhone' : 'typingIndicator';
-    
+
     typingDiv.innerHTML = `
       <div class="message-content">
         <span class="typing-indicator-text">Mitansh is typing</span>
@@ -269,7 +301,7 @@ class ChatInterface {
         </span>
       </div>
     `;
-    
+
     chatMessages.appendChild(typingDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
@@ -279,8 +311,8 @@ class ChatInterface {
    * @param {string} device - 'laptop' or 'phone'
    */
   hideTypingIndicator(device = 'laptop') {
-    const typingIndicator = device === 'phone' ? 
-      document.getElementById('typingIndicatorPhone') : 
+    const typingIndicator = device === 'phone' ?
+      document.getElementById('typingIndicatorPhone') :
       document.getElementById('typingIndicator');
     if (typingIndicator) {
       typingIndicator.remove();
@@ -295,35 +327,35 @@ class ChatInterface {
    * @param {string} device - 'laptop' or 'phone'
    */
   addMessage(message, type = 'bot', animate = false, device = 'laptop') {
-    const chatMessages = device === 'phone' ? 
-      document.getElementById('chatMessagesPhone') : 
+    const chatMessages = device === 'phone' ?
+      document.getElementById('chatMessagesPhone') :
       document.getElementById('chatMessages');
     if (!chatMessages) return;
 
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${type}-message`;
-    
+
     const messageContent = document.createElement('div');
     messageContent.className = 'message-content';
-    
+
     const messageParagraph = document.createElement('p');
-    
+
     if (animate && type === 'bot') {
       // Use typing animation for bot messages
       this.typeMessage(messageParagraph, message);
     } else {
       messageParagraph.textContent = message;
     }
-    
+
     const timeSpan = document.createElement('span');
     timeSpan.className = 'message-time';
     timeSpan.textContent = 'Just now';
-    
+
     messageContent.appendChild(messageParagraph);
     messageContent.appendChild(timeSpan);
     messageDiv.appendChild(messageContent);
     chatMessages.appendChild(messageDiv);
-    
+
     // Scroll to bottom
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
